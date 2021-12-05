@@ -1,8 +1,10 @@
 <?php
 class HomeController extends Controller{
     function Dashboard(){
-        $products = (new Products())->get();
-        $this->view('products-management/home-page',['products'=>$products]);
+        $title = 'products-management';
+        $this->view('products-management/list',[
+            'title'=>$title
+        ]);
     }
 
     function Detail(){
